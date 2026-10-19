@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1 — Задание 3 | Тюняев Никита K3341</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+            max-width: 640px;
+            width: 100%;
+            padding: 36px;
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 28px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        .info-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .features {
+            text-align: left;
+            background: rgba(15, 23, 42, 0.4);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .features li {
+            margin-left: 20px;
+            margin-top: 6px;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="badge">HTTP/1.1 Socket Server</span>
+        <h1>Лабораторная работа №1</h1>
+        <p class="subtitle">Практическое задание 3: Раздача HTML-страницы по HTTP</p>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Студент</div>
+                <div class="info-value">Тюняев Никита</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Учебная группа</div>
+                <div class="info-value">K3341</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Университет</div>
+                <div class="info-value">ИТМО (ФИНТ/ПИН)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Стек</div>
+                <div class="info-value">Python socket (TCP)</div>
+            </div>
+        </div>
+
+        <div class="features">
+            <strong>Особенности реализации:</strong>
+            <ul>
+                <li>Сервер написан на чистых сокетах без веб-фреймворков.</li>
+                <li>Формирует спецификационный ответ HTTP/1.1 200 OK.</li>
+                <li>Точно рассчитывает Content-Length в байтах для UTF-8.</li>
+                <li>Использует неблокирующее чтение и закрытие соединений.</li>
+            </ul>
+        </div>
+
+        <div class="footer-note">
+            Дисциплина «Веб-программирование» &bull; 2026–2027
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+site_name: Веб-программирование — Тюняев Никита K3341
+site_description: Отчёты по лабораторным работам по веб-программированию (Университет ИТМО)
+site_author: Никита Тюняев (K3341)
+repo_url: https://github.com/NikitaTyunyaev/ITMO_ICT_WebDevelopment_2026-2027
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: light blue
+  features:
+    - navigation.expand
+    - content.code.copy
+
+nav:
+  - Главная: index.md
+  - Лабораторные работы:
+    - "Лабораторная работа №1": labs/lab1/lab1.md
+  - О студенте: about.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - tables
